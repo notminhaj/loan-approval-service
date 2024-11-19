@@ -5,6 +5,8 @@ This is a Kaggle competition where I was tasked with creating a loan approval mo
 
 Unfortunately the "loan approval model.pkl" was too large to upload to github so you have to make it using the training script by training the model on train_data (it does it for you).
 
+I believe you need an Azure account to run this.
+
 Make sure to add the scoring uri the training script provides you with into app.py.
 
 Hope it runs perfectly!
