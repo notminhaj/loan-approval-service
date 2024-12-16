@@ -22,4 +22,19 @@ This is a necessary file needed to make sure everything runs.
 
 Unfortunately the "loan approval model.pkl" was too large to upload to github so you have to generate it using the training script by training the model on train_data (it does it for you).
 
-An azure account might be needed to run this.
+
+**How to run**
+
+An azure subscription will be needed to run this.
+
+1. Navigate to the azure ML studio and create a resource. Once inside the resource head to the "data" section and import the train and test data making sure to follow the same naming convention.
+2. Go to the "compute" section, then create and start a compute session. Then import the following files: "training script.ipynb", "score.py". After that, run every cell in the training script (could take ~20 mins).
+3. Download the  "app.py" file to your local PC.
+4. Open cmd and go to the path to your app.py file. Run the following commands:
+python -m venv gradio-env
+gradio-env\Scripts\activate
+pip install gradio requests azure-identity
+python app.py
+5. After running the script, Gradio will start a local server. You’ll see a message with a URL, like: Running on local URL:  http://127.0.0.1:7860
+
+You can open this URL in your browser to view and use the Gradio interface.
